@@ -1,0 +1,197 @@
+<!DOCTYPE html> 
+
+<html lang="ko">
+    <!-- 설정값 --> 
+    <head>
+        <meta charset="UTF-8">
+        <!-- 스크립트 연결인가?? -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!-- 스크립트 연결인가?? -->
+        <script type="src/javascript" src="./main.js"></script>
+        <link rel="stylesheet" href="./main.css" />
+
+        <!-- 배경화면 변경 버튼 함수 -->
+        <script>
+            function btn1(){
+             document.body.style.backgroundImage= "url('./backGround/bg4.jpg')";
+             }
+        </script>
+
+        <!-- 배경화면 지정, css활용??-->
+        <style>
+            body{
+                background-image: url("./backGround/bg1.jpg");
+                /* 이미지가 화면보다 크면 자동으로 변형된다. */
+                background-size: cover;
+            }
+        </style>
+
+        <!-- 홈페이지 표시줄 -->
+        <title>개인용 시작 페이지</title>
+    </head>
+
+    <body>
+        <!-- 전체 컨테이너 -->
+        <div class="container">
+            <!-- 제목 -->
+            <header>
+                <h1 style="background-color:rgba(255, 99, 71, 0.6);">개인용 시작 페이지</h1>
+            </header>
+            <!-- 전체 내용 -->
+            <section>
+                <!-- 행열 나누기 -->
+                <div class="row">
+                    <!-- 1번열-설정 / 열 크기 middle, 3만큼 차지 -->
+                    <div class="col-md-3">
+                        <nav>
+                            <!-- 1번목록 / navi 선택목록, flex-column 수직표시 -->
+                            <ul class="nav flex-column">
+                                <!-- 목록 제목 -->
+                                <h5><p class="text-white bg-dark">설정</p></h5> <!-- TODO 중간으로 정렬, 아이콘삽입 -->
+                                <li class="nav-item">
+                                    <!-- TODO 글씨크기 키우기, 뱃지크기 맞춤, 들여쓰기-->
+                                    <span class="badge badge-pill badge-secondary"><a class="nav-link text-white" href="#">배치변경</a></span>
+                                </li>
+                                <li class="nav-item">
+                                    <!-- TODO 글씨크기 키우기, 뱃지크기 맞춤, 들여쓰기-->
+                                    <span class="badge badge-pill badge-secondary"><a class="nav-link text-white" href="#">크기변경</a></span>
+                                </li>
+                                <li class="nav-item">
+                                    <!-- TODO 글씨크기 키우기, 뱃지크기 맞춤, 들여쓰기-->
+                                    <div id="front" onclick="btn1()"><span class="badge badge-pill badge-secondary" style="cursor: pointer;" ><a class="nav-link text-white"ㄴ>배경사진 설정</a></span></div>
+                                </li>
+                                <li class="nav-item">
+                                    <!-- TODO 글씨크기 키우기, 뱃지크기 맞춤, 들여쓰기-->
+                                    <span class="badge badge-pill badge-secondary"><a class="nav-link text-white" href="#">큰제목 변경</a></span>
+                                </li>
+                                <li class="nav-item">
+                                    <!-- TODO 빈 공백 넣는 법-->
+                                <a class="nav-link text-white"> (줄맞춤) </a>
+                                </li>
+                            </ul>
+    
+                            <!-- 2번목록 -->
+                            <ul class="nav flex-column">
+                                <!-- 목록 제목 -->
+                                <h5><p class="text-white bg-dark">추가위젯</p></h5> <!-- TODO 중간으로 정렬, 아이콘삽입 -->
+                                <li class="nav-item">
+                                    <!-- TODO 글씨크기 키우기, 뱃지크기 맞춤, 들여쓰기-->
+                                    <span class="badge badge-pill badge-info"><a class="nav-link text-white" href="#">뉴스</a></span>
+                                </li>
+                                <li class="nav-item">
+                                    <!-- TODO 글씨크기 키우기, 뱃지크기 맞춤, 들여쓰기-->
+                                    <span class="badge badge-pill badge-info"><a class="nav-link text-white" href="#">주가</a></span>
+                                </li>
+                                <li class="nav-item">
+                                    <!-- TODO 글씨크기 키우기, 뱃지크기 맞춤, 들여쓰기-->
+                                    <span class="badge badge-pill badge-info"><a class="nav-link text-white" href="#">포털사이트 목록</a></span>
+                                </li>
+                                <li class="nav-item">
+                                    <!-- TODO 글씨크기 키우기, 뱃지크기 맞춤, 들여쓰기-->
+                                    <span class="badge badge-pill badge-info"><a class="nav-link text-white" href="#">게임사이트 목록</a></span>
+                                </li>
+                                <li class="nav-item">
+                                    <!-- TODO 글씨크기 키우기, 뱃지크기 맞춤, 들여쓰기-->
+                                    <span class="badge badge-pill badge-info"><a class="nav-link text-white" href="#">메일 보관함</a></span>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <!-- 2번열-위젯 -->
+                    <div class="col-md-9">
+                        <div class="container">
+                            <div class="row">
+                                <!-- 1-1번 위젯 -->
+                                <div class="col-md-4">
+                                    <h5>페이스북 게시글</h5>
+                                    <div>
+                                        <!-- TODO 페북 (트위터 등등) API 참고, 자리배치 -->
+                                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F20531316728%2Fposts%2F10154009990506729%2F&width=500&show_text=true&height=292&appId" width="500" height="292" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                                    </div>
+                                </div>
+
+                                <!-- 1-2번 위젯 -->
+                                <div class="col-md-4">
+                                    <h5>즐겨찾기</h5>
+                                    <div>
+                                        <div class="overflow-auto"> dd<!-- TODO 즐겨찾기 API 참고 --></div>
+                                        <!-- 리스트박스 
+                                        <table id="factory_table" class="table" style="margin-top: 20px;">
+                                            <colgroup>
+                                                <col width="20%"/>
+                                                <col width="10%"/>
+                                            </colgroup>
+                                            
+                                            <thead>
+                                                <tr>
+                                                    <th>이름(설비)</th>
+                                                    <th>대수</th>
+                                                    <th>기계 및 컨트롤러 정보</th>
+                                                    <th>공정명</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                        
+                                            <tbody id="factory_tbody">
+                                                <tr>
+                                                    <td> <input type="text" class="form-control" placeholder="설비명">  </td>
+                                                    <td> <input type="number" class="form-control" placeholder="설치 대수" onkeypress="return event.charCode >= 48 && event.charCode <= 57">  </td>
+                                                    <td> <input type="text" class="form-control" placeholder="기계 및 컨트롤러 정보">  </td>
+                                                    <td> <input type="text" class="form-control" placeholder="공정명">  </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        -->
+                                    </div>
+                                </div>
+
+                                <!-- 1-3번 위젯 -->
+                                <div class="col-md-4">
+                                    <h5>실시간 차트</h5>
+                                    <div>
+                                        <!-- TODO 실시간 차트(사이트별) API 참고 -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <!-- 2-1번 위젯 -->
+                                <div class="col-md-4">
+                                    <h5>메모</h5>
+                                    <div>
+                                            <div class="overflow-auto"><!-- TODO 메모 API 참고 --></div>
+                                        </div>
+                                </div>
+                                
+                                <!-- 2-2번 위젯 -->
+                                <div class="col-md-4">
+                                    <h5>날씨</h5>
+                                    <div>
+                                            <!-- TODO 날씨 API 참고 -->
+                                        </div>
+                                </div>
+
+                                <!-- 2-3번 위젯 -->
+                                <div class="col-md-4">
+                                    <h5><button type="button" class="btn btn-secondary btn-lg">추가</button></h5>
+                                    <div>
+                                            <!-- TODO 버튼 클릭시 추가 위젯 구성 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- 열 나누기(위젯별로) -->
+                </div>
+                <!-- 행열 나누기(설정목록, 위젯) -->
+            </section>
+        </div>
+        <!-- 전체 컨테이너 -->
+    </body>
+</html>
