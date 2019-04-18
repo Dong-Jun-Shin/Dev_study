@@ -1,9 +1,29 @@
+/*배경화면 사이즈 조정을 한다.*/
+html,body,div{height:100%;}
 body{
     /* background-image: url("./backGround/bg1.jpg"); */
     /* 이미지가 화면보다 크면 자동으로 변형된다. */
+    background-position: center;
     background-size: cover;
 }
 
 .background-page {
     background-color:rgba(255, 99, 71, 0.6);
 }
+
+
+/*모달 창 사이즈를 조절한다.*/
+.modal-dialog.modal-8020size {
+    width: 80%;
+    height: 20%;
+  }
+
+.modal-dialog.modal-6020size {
+    width: 60%;
+    height: 20%;
+  }
+
+.modal-content.modal-80size {
+    height: auto;
+    min-height: 80%;
+  }

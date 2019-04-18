@@ -41,6 +41,72 @@ function backgroundBtn() {
 }
 
 /**
+ * 배경화면을 직접 설정할 수 있는 창을 띄워준다.
+ * 
+ * @method bgManuallyBtn
+ * @public
+ */
+function bgManuallyBtn() {
+    $(function(){
+        $("#secondFront").click(function(){
+            $("#bgManuallyModal").modal();
+        })
+    })
+}
+
+/**
+ * 버튼 클릭시 선택한 사진으로 바뀌도록 한다.
+ * ->"보안상 경로가 fakePath로 표시되서 구현 불가능"
+ */
+
+function getRealPath(obj){
+    obj.select();
+
+    // document.selection.createRange().text.toString(); 이게 실행이 안된다면....
+    // document.selection.createRangeCollection()[0].text.toString(); 이걸로....
+    document.body.real_path.value = document.selection.createRange().text.toString();
+  
+  }
+  
+$(function(){
+    $("#changeSelBtn").click(function(){
+        document.body.style.backgroundImage = `url(${real_path.value}`;
+    })
+})
+
+/**
+ * 큰 제목을 바꿔준다.
+ */
+function firstTitleBtn(){
+    /**
+     * 바꿀 이름을 입력할 창을 띄운다.
+     */
+    $(function(){
+        $("#changeTitle").click(function(){
+            $("#changeTitleModal").modal();
+        })
+    })
+}
+
+/**
+ * 이름을 바꾼다.
+ */
+$(function(){
+    $("#changeTitleBtn").click(function(){
+        var textarea = document.getElementById('changeTitleBox');
+        $("#firstTitle").text(textarea.value);
+    })
+})
+
+
+    
+
+
+
+
+
+//----------------------------------------------------------------------------------------
+/**
  * 토글 여부에 따라 변경한다.
  * 
  * @method toggle
@@ -55,10 +121,13 @@ $(function tooggle() {
         }
         // off 면 수동(경로 설정)
         else {
-            // TODO 1번째 돔요소를 input의 hidden 만들어서 data-target 으로 토글 생성 할수있도록 만들어준다.
+            // TODO 1번째 돔요소를 data-target 으로 토글을 생성할 수 있도록 input의 hidden을 만들어준다.
+            //
             // list를 화면에 맞춰서 보여준다.
             // 선택된 내용을 저장한뒤 화면보여준다.
             isToggle = false
+
+            
         }
     })
 })
