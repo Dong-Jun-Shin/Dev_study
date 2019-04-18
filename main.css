@@ -1,0 +1,9 @@
+body{
+    /* background-image: url("./backGround/bg1.jpg"); */
+    /* 이미지가 화면보다 크면 자동으로 변형된다. */
+    background-size: cover;
+}
+
+.background-page {
+    background-color:rgba(255, 99, 71, 0.6);
+}
