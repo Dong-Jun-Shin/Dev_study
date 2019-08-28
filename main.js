@@ -26,7 +26,7 @@ let arrImg = [
  */
 $(document).ready(function () {
     document.body.style.backgroundImage = "url('./backGround/bg1.jpg')";
-});
+})
 
 /**
  * 배경화면을 변경한다.
@@ -57,7 +57,7 @@ function bgManuallyBtn() {
 /**
  * 버튼 클릭시 선택한 사진으로 바뀌도록 한다.
  * ->"보안상 경로가 fakePath로 표시되서 구현 불가능"
- */
+
 
 function getRealPath(obj){
     obj.select();
@@ -67,10 +67,12 @@ function getRealPath(obj){
     document.body.real_path.value = document.selection.createRange().text.toString();
   
   }
+*/
   
 $(function(){
     $("#changeSelBtn").click(function(){
-        document.body.style.backgroundImage = `url(${real_path.value}`;
+        let real_path = $("#selectImgPath").val().replace(/C:\\fakepath\\/i, '');
+        document.body.style.backgroundImage = `url(./backGround/${real_path}`;
     })
 })
 
@@ -97,12 +99,6 @@ $(function(){
         $("#firstTitle").text(textarea.value);
     })
 })
-
-
-    
-
-
-
 
 
 //----------------------------------------------------------------------------------------
